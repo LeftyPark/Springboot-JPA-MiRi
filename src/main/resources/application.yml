@@ -8,6 +8,16 @@ server:
       force: true
     
 spring:
+
+  servlet:
+    multipart:
+      enabled: true
+      location: C:\Users\com20\OneDrive\바탕 화면\upload
+      # location: C:\\upload
+      max-request-size: 30MB
+      max-file-size: 10MB
+
+
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -22,17 +32,19 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 #       use-new-id-generator-mappings: false
-    show-sql: true
+    show-sql: false
     properties:
       hibernate.format_sql: true
 
   jackson:
     serialization:
       fail-on-empty-beans: false
+
+
       
       
 # cos:

@@ -1,0 +1,72 @@
+.header--navbar{
+    background-color: rgb(7, 159, 119);
+    /* background-color: yellowgreen; */
+    /* background-color: #ff4f00; */
+}
+
+
+
+.navbar-brand{
+    color: rgb(250, 200, 0);
+    font-weight: bolder;
+}
+
+.navbar-brand:hover{
+    color: white;
+    font-weight: bolder;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: rgb(241, 245, 190);
+}
+
+
+
+
+
+
+/* 추가 본문 */
+
+.content--back{
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(7, 159, 119);
+}
+
+.content--w{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+
+.content--img{
+    width: 350px;
+    height: 500px;
+    background-color: rgb(7, 159, 119);
+    border: 3px solid rgb(250, 200, 0);
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+
+    margin: 5px;
+}
+
+.content--img img{
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+
+.content--text{
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+}

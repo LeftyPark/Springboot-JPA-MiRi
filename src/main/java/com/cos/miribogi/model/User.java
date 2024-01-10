@@ -5,9 +5,11 @@ import java.sql.Timestamp;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
-import jakarta.annotation.sql.DataSourceDefinition;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -34,8 +36,9 @@ public class User {
     @Column(nullable = false, length = 100)
     private String password;
 
-    @ColumnDefault("'user'")
-    private String role;
+    //@ColumnDefault("user")
+    @Enumerated(EnumType.STRING) // enum 타입에 데이터 타입이 String이라고 명시하는 것
+    private RoleType role;
 
     @Column(nullable = false, length = 50)
     private String email;
